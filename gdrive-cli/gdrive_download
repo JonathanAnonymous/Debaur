@@ -25,10 +25,10 @@ install_gdrive()
 		{
 case $(uname -m) in
 x86_64)
-wget "gdrive-cli/gdrive-64 -O /tmp/gdrive-cli/"
+wget "https://github.com/JonathanAnonymous/Debaur/raw/master/gdrive-cli/gdrive_64 -O /tmp/gdrive-cli/"
 ;;
 i686)
-wget "gdrive-cli/gdrive-32 -O /tmp/gdrive-cli/"
+wget "https://github.com/JonathanAnonymous/Debaur/raw/master/gdrive-cli/gdrive_32 -O /tmp/gdrive-cli/"
 ;;
 esac
 sudo mv gdrive* /usr/bin/gdrive
