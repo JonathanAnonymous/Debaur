@@ -1,0 +1,37 @@
+cd /tmp/gdrive-cli
+mkdir /tmp/gdrive-cli
+wget --version > /dev/null
+case $? in
+1) install_wget
+;;
+esac
+
+install_wget()
+	{
+clear
+echo "É necessário instalar o pacote wget, deseja instalar?[S/n]"
+read can_install
+cas $can_install in
+s)
+sudo apt-get install wget -y && install_gdrive()
+;;
+n)
+echo "Dependencia não instalada, impossível continuar"
+exit
+;;
+esac 
+	}
+install_gdrive()
+		{
+case $(uname -m) in
+x86_64)
+wget "gdrive-cli/gdrive-64 -O /tmp/gdrive-cli/"
+;;
+i686)
+wget "gdrive-cli/gdrive-32 -O /tmp/gdrive-cli/"
+;;
+esac
+sudo mv gdrive* /usr/bin/gdrive
+sudo chmod +x /usr/bin/gdrive
+}
+echo "gdrive instalado com sucesso"

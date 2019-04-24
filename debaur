@@ -1,0 +1,6 @@
+cd /tmp
+case $1 in
+update)
+wget "/repo" && echo "Repositório atualizado com sucesso" || echo "Erro ao baixar repositório"
+;;
+
