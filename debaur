@@ -1,6 +1,6 @@
 cd /tmp
 case $1 in
 update)
-wget "/repo" && echo "Repositório atualizado com sucesso" || echo "Erro ao baixar repositório"
+wget "https://github.com/JonathanAnonymous/Debaur/raw/master/repo" && echo "Repositório atualizado com sucesso" || echo "Erro ao baixar repositório"
 ;;
 
