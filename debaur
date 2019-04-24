@@ -3,4 +3,13 @@ case $1 in
 update)
 wget "https://github.com/JonathanAnonymous/Debaur/raw/master/repo" && echo "Repositório atualizado com sucesso" || echo "Erro ao baixar repositório"
 ;;
+install)
+
+;;
+esac
+
+install_package()
+package_fi=$(cat /tmp/repo | awk {'print $1'} | grep $2)
+echo $2
+
 
